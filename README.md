@@ -5,17 +5,15 @@ A modern full-stack application built with Next.js, GraphQL, Prisma, and Express
 ## 🚀 Tech Stack
 
 - **Frontend**: Next.js 15 with App Router, TypeScript, Tailwind CSS, Shadcn UI
-- **Backend**: Express.js with TypeScript
-- **Database**: PostgreSQL with Prisma ORM
-- **GraphQL**: Apollo Client for data fetching
-- **Development**: ESLint, Prettier, Husky, TypeScript
+- **Backend**: Next.js
+- **Database**: Mongodb
 
 ## 📦 Additional Technologies
 
 - **Styling**: Tailwind CSS v4 with Shadcn UI components
-- **State Management**: Apollo Client with GraphQL
-- **Database**: Prisma ORM with PostgreSQL
-- **API**: Express.js with CORS, Helmet, Morgan
+- **State Management**: Zustand
+- **Validations**: Zod
+- **API**: Next.js api
 - **Development Tools**: ESLint, Prettier, Husky, lint-staged
 - **Package Manager**: pnpm
 
@@ -25,7 +23,6 @@ A modern full-stack application built with Next.js, GraphQL, Prisma, and Express
 
 - Node.js 18+
 - pnpm
-- PostgreSQL database
 
 ### Installation
 
@@ -71,31 +68,6 @@ pnpm dev
 
 # Start Express.js backend (in another terminal)
 pnpm server:dev
-```
-
-## 📁 Project Structure
-
-```
-flowlet/
-├── src/
-│   ├── app/                 # Next.js App Router
-│   │   ├── globals.css     # Global styles
-│   │   ├── layout.tsx      # Root layout
-│   │   └── page.tsx        # Home page
-│   ├── components/         # React components
-│   │   └── ui/            # Shadcn UI components
-│   ├── lib/               # Utility libraries
-│   │   ├── apollo/        # Apollo Client setup
-│   │   ├── graphql/       # GraphQL queries & mutations
-│   │   └── prisma.ts      # Prisma client
-│   └── server/            # Express.js backend
-│       └── index.ts       # Server entry point
-├── prisma/
-│   └── schema.prisma      # Database schema
-├── .env.local            # Environment variables
-├── components.json       # Shadcn UI config
-├── tailwind.config.ts    # Tailwind CSS config
-└── package.json
 ```
 
 ## 🎯 Available Scripts
