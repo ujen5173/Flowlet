@@ -1,174 +1,117 @@
 # Flowlet
 
-A modern full-stack application built with Next.js, GraphQL, Prisma, and Express.js.
+> A modern blogging platform built for developers, by developers.
 
-## 🚀 Tech Stack
+[![Next.js](https://img.shields.io/badge/Next.js-16-black)](https://nextjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)](https://www.postgresql.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-- **Frontend**: Next.js 15 with App Router, TypeScript, Tailwind CSS, Shadcn UI
-- **Backend**: Next.js
-- **Database**: Mongodb
+## About Flowlet
 
-## 📦 Additional Technologies
+Flowlet is a feature-rich blogging platform designed specifically for developers and technical writers. Write in Markdown, engage with the community, and showcase your technical expertise—all in one place.
 
-- **Styling**: Tailwind CSS v4 with Shadcn UI components
-- **State Management**: Zustand
-- **Validations**: Zod
-- **API**: Next.js api
-- **Development Tools**: ESLint, Prettier, Husky, lint-staged
-- **Package Manager**: pnpm
+### Key Features
 
-## 🛠️ Getting Started
+- Markdown Editor - Write posts with full Markdown support
+- User Profiles - Personalized author pages and customizable profiles
+- Comments System - Engage with readers through threaded discussions
+- Tags & Categories - Organize and discover content easily
+- Search - Find posts and authors quickly
+- Analytics - Track views and engagement on your posts
+- Responsive Design - Seamless experience across all devices
+- Secure Authentication - Safe and reliable user authentication
+
+## Tech Stack
+
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Database:** [PostgreSQL](https://www.postgresql.org/) (via Supabase)
+- **Authentication:** [Betterauth.js](https://better-auth.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## Installation
 
 ### Prerequisites
 
 - Node.js 18+
+- PostgreSQL database (or Supabase account)
 - pnpm
 
-### Installation
+### Setup
 
-1. Clone the repository:
+**Clone the repository**
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ujen5173/flowlet.git
 cd flowlet
 ```
 
-2. Install dependencies:
+**Install dependencies**
 
 ```bash
 pnpm install
 ```
 
-3. Set up environment variables:
+**Setup environment variables**
+
+Create a `.env.local` file in the root directory with your configuration.
+
+**Run database migrations**
 
 ```bash
-cp env.example .env.local
-```
-
-4. Update the `.env.local` file with your database URL and other configuration.
-
-5. Set up the database:
-
-```bash
-# Generate Prisma client
-pnpm db:generate
-
-# Push schema to database
-pnpm db:push
-
-# Or run migrations
 pnpm db:migrate
 ```
 
-6. Start the development servers:
+**Start development server**
 
 ```bash
-# Start Next.js frontend (in one terminal)
 pnpm dev
-
-# Start Express.js backend (in another terminal)
-pnpm server:dev
 ```
 
-## 🎯 Available Scripts
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Frontend
+## Roadmap
 
-- `pnpm dev` - Start Next.js development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
+### Features (v1.0 - 6th sem College Project)
 
-### Backend
+- User authentication & authorization
+- Create, edit, and delete posts
+- Markdown editor with preview
+- Comments system
+- User profiles
+- Tags and categories
+- Basic search functionality
+- Responsive design
 
-- `pnpm server` - Start Express.js server
-- `pnpm server:dev` - Start Express.js with hot reload
+## License
 
-### Database
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- `pnpm db:generate` - Generate Prisma client
-- `pnpm db:push` - Push schema to database
-- `pnpm db:migrate` - Run database migrations
-- `pnpm db:studio` - Open Prisma Studio
+## Author
 
-### Development
+**Your Name**
 
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Fix ESLint errors
-- `pnpm format` - Format code with Prettier
-- `pnpm type-check` - Run TypeScript type checking
+- GitHub: [@ujen5173](https://github.com/ujen5173) | [@ashh.zipp](https://github.com/ashwesha)
+- LinkedIn: [Ujen Basi](https://linkedin.com/in/yourprofile) | [Ashwesha Shrestha](https://linkedin.com/in/yourprofile)
+- Email: ujenbasi12@gmail.com | ashweshashresthaaa@gmail.com
 
-## 🔧 Configuration
+## Acknowledgments
 
-### Environment Variables
+- Built as a 6th semester BCA project
+- Thanks to the open-source community
 
-Create a `.env.local` file with the following variables:
+## Screenshots
 
-```env
-# Database
-DATABASE_URL="postgresql://username:password@localhost:5432/flowlet?schema=public"
+Screenshots will be added soon.
 
-# Next.js
-NEXT_PUBLIC_APP_URL="http://localhost:3000"
-NEXT_PUBLIC_GRAPHQL_ENDPOINT="http://localhost:3001/graphql"
+## Known Issues
 
-# Server
-PORT=3001
-NODE_ENV="development"
-FRONTEND_URL="http://localhost:3000"
+None yet! Report issues [here](https://github.com/ujen5173/flowlet/issues)
 
-# JWT (if using authentication)
-JWT_SECRET="your-super-secret-jwt-key-here"
-```
+---
 
-### Database Setup
+Star this repo if you find it helpful!
 
-1. Install PostgreSQL
-2. Create a database named `flowlet`
-3. Update the `DATABASE_URL` in your `.env.local` file
-4. Run `pnpm db:push` to create the database schema
-
-## 🎨 UI Components
-
-This project uses Shadcn UI components. To add new components:
-
-```bash
-pnpm dlx shadcn@latest add [component-name]
-```
-
-## 📝 Development Guidelines
-
-- Use TypeScript for all new code
-- Follow ESLint and Prettier configurations
-- Write meaningful commit messages
-- Use conventional commit format
-- Test your changes before committing
-
-## 🚀 Deployment
-
-### Frontend (Vercel)
-
-1. Connect your repository to Vercel
-2. Set environment variables in Vercel dashboard
-3. Deploy automatically on push to main branch
-
-### Backend (Railway/Render/Heroku)
-
-1. Set up your database (PostgreSQL)
-2. Configure environment variables
-3. Deploy your Express.js server
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## 📞 Support
-
-If you have any questions or need help, please open an issue in the repository.
+**Made with perfection by Ujen Basi and Ashwesha Shrestha**
