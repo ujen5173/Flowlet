@@ -52,7 +52,7 @@
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(62.3% 0.214 259.815);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -120,4 +120,34 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.hero-section {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  background-image: url(/bg.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: bottom;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.onboard-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100vw;
+  background-image: url(/onboard-bg.webp);
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-background-position: bottom;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }

@@ -17,6 +17,7 @@ export interface SEOProps {
   section?: string;
   tags?: string[];
   noIndex?: boolean;
+  removeSiteName?: boolean;
   canonical?: string;
 }
 
@@ -33,9 +34,14 @@ export function constructSEO({
   section,
   tags = [],
   noIndex = false,
+  removeSiteName = false,
   canonical,
 }: SEOProps = {}): Metadata {
-  const fullTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
+  const fullTitle = title
+    ? removeSiteName
+      ? title
+      : `${title} | ${siteConfig.name}`
+    : siteConfig.name;
   const fullDescription = description || siteConfig.description;
   const fullImage = image || siteConfig.ogImage;
   const fullUrl = url ? `${siteConfig.url}${url}` : siteConfig.url;
@@ -165,7 +171,7 @@ export const seoUtils = {
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
-        email: "support@_flowlet.vercel.app",
+        email: "support@flowletapp.vercel.app",
       },
     };
   },

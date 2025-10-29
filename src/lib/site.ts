@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Flowlet",
   description:
     "Write your blogs with rich features, AI-powered editor, and seamless content creation experience.",
-  url: "https://_flowlet.vercel.app",
-  ogImage: "https://_flowlet.vercel.app/og-image.png",
+  url: "https://flowletapp.vercel.app",
+  ogImage: "https://flowletapp.vercel.app/og-image.png",
   links: {
     twitter: "https://twitter.com/flowlet",
     github: "https://github.com/ujen5173/flowlet",
@@ -24,7 +24,7 @@ export const siteConfig = {
   authors: [
     {
       name: "Flowlet Team",
-      url: "https://_flowlet.vercel.app/about",
+      url: "https://flowletapp.vercel.app/about",
     },
   ],
   creator: "Flowlet",

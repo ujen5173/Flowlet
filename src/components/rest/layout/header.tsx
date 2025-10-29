@@ -18,13 +18,13 @@ import Logo from "../Logo";
 const headerLinks = [
   {
     id: "1",
-    label: "Explore",
-    link: "/explore",
+    label: "Community",
+    link: "/community",
     external: false,
   },
   {
     id: "2",
-    label: "Products",
+    label: "Explore",
     link: "#",
     external: false,
     child: [
@@ -58,15 +58,15 @@ const headerLinks = [
 
 const Header = () => {
   return (
-    <header className="w-full bg-transparent p-6">
-      <div className="border flex items-center justify-between border-border rounded-full shadow-md p-3 bg-white w-(--header-height) mx-auto">
+    <header className="w-full backdrop-blur-sm z-50 sticky top-0 left-0 bg-transparent p-6">
+      <div className="border flex items-center justify-between border-border rounded-full shadow-md p-3 bg-white max-w-(--header-height) mx-auto">
         <Logo withDot />
         <NavigationMenu delayDuration={100}>
           <NavigationMenuList>
             {headerLinks.map((l) =>
               l.child ? (
                 <NavigationMenuItem key={l.id} className="hidden md:block">
-                  <Button asChild>
+                  <Button asChild variant={"link"}>
                     <NavigationMenuTrigger>{l.label}</NavigationMenuTrigger>
                   </Button>
                   <NavigationMenuContent>
@@ -95,8 +95,8 @@ const Header = () => {
                 </NavigationMenuItem>
               ) : (
                 <NavigationMenuItem key={l.id}>
-                  <Button asChild>
-                    <NavigationMenuLink asChild>
+                  <NavigationMenuLink className="rounded-full" asChild>
+                    <Button asChild variant={"link"}>
                       <Link
                         href={l.link}
                         target={l.external ? "_blank" : "_self"}
@@ -106,8 +106,8 @@ const Header = () => {
                           {l.external && <LinkSquare02Icon size={4} />}
                         </span>
                       </Link>
-                    </NavigationMenuLink>
-                  </Button>
+                    </Button>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               )
             )}
@@ -115,7 +115,7 @@ const Header = () => {
         </NavigationMenu>
 
         <div className="">
-          <Button asChild variant={"outline"}>
+          <Button asChild variant={"outline"} className="shadow-sm">
             <Link href="/onboard">Sign in</Link>
           </Button>
         </div>

@@ -91,7 +91,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Your Name**
+**Ujen basi** | **Ashwesha Shrestha**
 
 - GitHub: [@ujen5173](https://github.com/ujen5173) | [@ashh.zipp](https://github.com/ashwesha)
 - LinkedIn: [Ujen Basi](https://linkedin.com/in/yourprofile) | [Ashwesha Shrestha](https://linkedin.com/in/yourprofile)

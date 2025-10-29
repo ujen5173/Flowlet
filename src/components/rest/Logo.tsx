@@ -6,15 +6,15 @@ const bitcount = Bitcount_Single({});
 
 const SIZES = {
   sm: {
-    icon: 25,
+    icon: 18,
     text: "text-xl font-medium",
   },
   md: {
-    icon: 30,
+    icon: 25,
     text: "text-2xl font-semibold",
   },
   lg: {
-    icon: 40,
+    icon: 30,
     text: "text-3xl font-semibold",
   },
 } as const;
@@ -33,7 +33,7 @@ const Logo = ({
   color,
 }: PROPS) => {
   return (
-    <div className="flex items-center select-none">
+    <div className="flex items-center gap-2 select-none">
       <Image
         className="select-none object-cover"
         src="/logo.svg"
@@ -43,6 +43,7 @@ const Logo = ({
         height={SIZES[size].icon}
         priority
       />
+
       {!onlyIcon && (
         <h1
           className={cn(
