@@ -9,10 +9,10 @@ const HeroSection = () => {
       <div className="hero-section"></div>
       <div className="container mx-auto px-4 relative z-10 py-16">
         <div className="space-y-6 max-w-5xl text-center mx-auto">
-          <h1 className="text-5xl font-bold text-slate-800">
+          <h1 className="text-5xl font-bold text-slate-700">
             Create, collaborate, and <br /> scale your blogs and articles.
           </h1>
-          <p className="text-xl font-medium text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg font-medium text-slate-500 max-w-3xl mx-auto">
             Effortlessly build and publish articles, blogs, and product guides
             with Flowlet, with the flexibility of a headless CMS and more.
           </p>

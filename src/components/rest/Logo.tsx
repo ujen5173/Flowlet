@@ -1,8 +1,6 @@
-import { Bitcount_Single } from "next/font/google";
 import Image from "next/image";
+import { bitcount } from "~/lib/font";
 import { cn } from "~/lib/utils";
-
-const bitcount = Bitcount_Single({});
 
 const SIZES = {
   sm: {

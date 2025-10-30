@@ -1,3 +1,4 @@
+import { Bitcount_Single } from "next/font/google";
 import localFont from "next/font/local";
 
 export const helvetica = localFont({
@@ -25,3 +26,5 @@ export const helvetica = localFont({
     },
   ],
 });
+
+export const bitcount = Bitcount_Single({});

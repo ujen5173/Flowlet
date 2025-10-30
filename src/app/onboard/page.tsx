@@ -26,7 +26,9 @@ const Onboard = () => {
       <Card className="relative z-10 max-w-lg">
         <CardHeader className="mb-4">
           <div className="mx-auto">
-            <Logo size={"lg"} withDot />
+            <Link href="/">
+              <Logo size={"lg"} withDot />
+            </Link>
           </div>
         </CardHeader>
         <CardContent>
